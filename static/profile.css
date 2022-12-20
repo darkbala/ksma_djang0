@@ -17,6 +17,7 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
+  background-color: rgba(240, 248, 255, 0.103);
 }
 .prof_info {
   width: 80%;
@@ -40,7 +41,7 @@
 }
 
 .prof_con {
-  width: 1000px;
+  width: 900px;
   height: 550px;
   display: flex;
   justify-content: center;
@@ -66,6 +67,8 @@
   color: white !important;
   background: none;
   border: 2px solid white;
+  cursor: pointer;
+  font-size: 16px;
 }
 .prof_bottom > a > button {
   padding: 10px;
@@ -117,4 +120,13 @@
 }
 .prof_ava > img {
   border-radius: 50%;
+}
+.prof_bottom > a {
+  cursor: pointer;
+  width: 310px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
 }

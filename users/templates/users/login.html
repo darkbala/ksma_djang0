@@ -10,7 +10,7 @@
             </h1>
             <hr>
         </div>
-        <form method="POST">
+        <form method="POST" class="log_form">
             {% csrf_token %}
             <div class="form">
                 <div class="first_form">
@@ -36,13 +36,11 @@
                     </div>
                 </div>
             </div>
-            <div class="form_row">
+            <div class="form">
                 <div>
-                    <div class="form_group mt-0 mb-1">
-                        <button name="login" class="col-md-12 btn btn-dark" id="login">
-                            Sign in
-                        </button>
-                    </div>
+                    <button class="log_sign" name="login" id="login">
+                        Sign in
+                    </button>
                 </div>
             </div>
 
