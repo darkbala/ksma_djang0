@@ -1,0 +1,12 @@
+{% extends 'note/notes.html' %}
+{% block content %}
+<div class="del_wrap">
+    <div class="del_modal">
+        <form action="" method="post" enctype="multipart/form-data">
+            <h1 class="del_text">Are you sure you want to delete the note? </h1>
+            {% csrf_token %}
+            <input type="submit" value="delete" class="del_btn">
+        </form>
+    </div>
+</div>
+{% endblock content %}

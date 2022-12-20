@@ -1,0 +1,41 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="ab_wrap about">
+    <div>
+        <div class="ab_frt">
+            <div class="ab_left">
+                <div>
+                    <img src="{{book.image_of_book.url}}" alt="picture" class="ab_img">
+                    <h1 class="ab_name">name: {{book.name_of_book}}</h1>
+                </div>
+                <a href="{{book.download.url}}" download><button class="ab_download">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xmlns:svgjs="http://svgjs.com/svgjs" width="40" height="40" x="0" y="0"
+                            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve"
+                            class="ab_svg">
+                            <g>
+                                <path clip-rule="evenodd"
+                                    d="m282.511 347.627 108.698-108.703c10.345-10.346 27.142-10.345 37.489-.002 10.35 10.346 10.35 27.144.002 37.492l-153.955 153.957c-4.976 4.977-11.706 7.769-18.744 7.769-7.039 0-13.769-2.792-18.746-7.769l-153.955-153.958c-10.348-10.349-10.349-27.146.003-37.492 10.347-10.342 27.145-10.342 37.49.003l108.696 108.703v-321.116c0-14.638 11.873-26.511 26.512-26.511 14.638 0 26.51 11.873 26.51 26.511zm229.489 15.594c0-14.636-11.875-26.511-26.511-26.511-14.637 0-26.511 11.875-26.511 26.511v41.739c0 29.775-24.242 54.017-54.017 54.017h-297.922c-29.774 0-54.017-24.243-54.017-54.017v-41.739c0-14.636-11.876-26.511-26.512-26.511-14.635 0-26.51 11.876-26.51 26.511v41.739c0 59.032 48.007 107.04 107.039 107.04h297.922c59.032 0 107.039-48.008 107.039-107.04z"
+                                    fill-rule="evenodd" fill="#ffffff" data-original="#000000" class=""></path>
+                            </g>
+                        </svg>
+                        <p>Download</p>
+                    </button></a>
+            </div>
+            <div class="ab_p">
+                <p class="ab_desc">{{book.description_of_book}}</p>
+                <div>
+                    <p>author:
+                        <span class="ab_bold">{{book.author_of_book}}</span>
+                    </p>
+                    <p>course:
+                        <span class="ab_bold">{{book.course}}</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+{% endblock %}

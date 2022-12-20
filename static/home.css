@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100;200;300;400;500;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Arima Madurai', cursive;
+}
+
+:root {
+  --d: 2500ms;
+  --angle: 90deg;
+  --gradX: 100%;
+  --gradY: 50%;
+  --c1: rgb(255, 255, 255);
+  --c2: rgba(168, 239, 255, 0.1);
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --gradX {
+  syntax: '<percentage>';
+  initial-value: 50%;
+  inherits: true;
+}
+
+@property --gradY {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: true;
+}
+.wrap {
+  position: relative;
+  width: 100%;
+  height: 750px;
+  background-size: 100% 100%;
+  background-repeat: repeat-x;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+.welcome_text {
+  font-size: 55px;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.box {
+  font-size: 3vw;
+  margin: max(1rem, 3vw);
+  border: 0.35rem solid;
+  padding: 3vw;
+  border-image: conic-gradient(
+      from var(--angle),
+      var(--c2),
+      var(--c1) 0.1turn,
+      var(--c1) 0.15turn,
+      var(--c2) 0.25turn
+    )
+    30;
+  animation: borderRotate var(--d) linear infinite forwards;
+}
+.box2 {
+  padding: 5px;
+  border: 2px solid;
+  border-image: conic-gradient(
+      from var(--angle),
+      var(--c2),
+      var(--c1) 0.1turn,
+      var(--c1) 0.15turn,
+      var(--c2) 0.25turn
+    )
+    10;
+  animation: borderRotate var(--d) linear infinite forwards;
+}
+
+@keyframes borderRotate {
+  100% {
+    --angle: 420deg;
+  }
+}
+
+/* section 2222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222 */
+
+.section {
+  width: 100%;
+  background-color: #3e1229;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.section_text_div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section_text_title {
+  color: white;
+  font-size: 40px;
+}
+.section2 {
+  position: relative;
+  width: 100%;
+  height: 750px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wave2 {
+  width: 100%;
+  top: 0px;
+  left: 0;
+  position: absolute;
+  transform: rotate(180deg);
+}
+.svgWave {
+  color: #842b31f5;
+}
+.sec_carousel_div {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  margin: 4% 0;
+  width: 210px;
+  height: 350px;
+  position: relative;
+  perspective: 1000px;
+}
+#carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  animation: rotation 15s infinite linear;
+}
+#carousel:hover {
+  animation-play-state: paused;
+}
+#carousel figure {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  left: 10px;
+  top: 10px;
+  border: 3px solid silver;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+.sec_fig_lin {
+  background: linear-gradient(-45deg, #7e1632 0%, #43081e92 100%);
+}
+.carousel_p {
+  font-size: 12px;
+  color: white;
+  text-align: center;
+}
+.carousel_a {
+  text-decoration: none;
+}
+.carousel_img {
+  width: 80px;
+  height: 80px;
+  border-radius: 5%;
+  border: 10px solid #c0c0c08d;
+}
+.left_sec_svg {
+  width: 200px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sec_man {
+  width: 350px;
+  height: 350px;
+}
+.sec_woman {
+  width: 250px;
+  height: 350px;
+}
+#carousel figure:nth-child(1) {
+  transform: rotateY(0deg) translateZ(288px);
+}
+#carousel figure:nth-child(2) {
+  transform: rotateY(40deg) translateZ(288px);
+}
+#carousel figure:nth-child(3) {
+  transform: rotateY(80deg) translateZ(288px);
+}
+#carousel figure:nth-child(4) {
+  transform: rotateY(120deg) translateZ(288px);
+}
+#carousel figure:nth-child(5) {
+  transform: rotateY(160deg) translateZ(288px);
+}
+#carousel figure:nth-child(6) {
+  transform: rotateY(200deg) translateZ(288px);
+}
+#carousel figure:nth-child(7) {
+  transform: rotateY(240deg) translateZ(288px);
+}
+#carousel figure:nth-child(8) {
+  transform: rotateY(280deg) translateZ(288px);
+}
+#carousel figure:nth-child(9) {
+  transform: rotateY(320deg) translateZ(288px);
+}
+
+@keyframes rotation {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.per_div {
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+}
+.per_div_h {
+  text-align: center;
+  font-size: 40px;
+}
+.per_div_child {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.per_p {
+  width: 50%;
+}
+.per_image {
+  width: 25%;
+  height: 350px;
+  border-radius: 10px;
+}

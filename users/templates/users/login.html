@@ -1,0 +1,57 @@
+{% extends "index.html" %} {% block title %} Login Page {% endblock title%}
+{% block content %}
+
+<div class="form_cont">
+
+    <div>
+        <div class="h1_form_cont">
+            <h1>
+                Sign In
+            </h1>
+            <hr>
+        </div>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form">
+                <div class="first_form">
+                    <div>
+                        <label class="small">Username</label>
+                        {{ form.username }}
+                    </div>
+                </div>
+            </div>
+            <div class="form">
+                <div class="first_form2">
+                    <div>
+                        <label class="small">Password</label>
+                        {{ form.password }}
+                    </div>
+                </div>
+            </div>
+            <div class="form">
+                <div class="first_form3">
+                    <div>
+                        {{ form.remember_me }}
+                        <label> Remember me</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form_row">
+                <div>
+                    <div class="form_group mt-0 mb-1">
+                        <button name="login" class="col-md-12 btn btn-dark" id="login">
+                            Sign in
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+        <div class="card_footer">
+            <div class="small">
+                <a href="{% url 'users-register' %}" class="a">Don't have an account yet? Go to signup</a><br />
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,54 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="prof_wrap">
+    <div class="prof_content">
+        {% if user_form.errors %}
+        <div class="alert alert-danger alert-dismissible" role="alert">
+            <div id="form_errors">
+                {% for key, value in user_form.errors.items %}
+                <strong>{{ value }}</strong>
+                {% endfor %}
+            </div>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endif %}
+        <div class="prof_con">
+            <form class="prof_info" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="prof_names">
+                    <div class="prof_colm">
+                        <label class="small mb-1">Username:</label>
+                        {{ user_form.username }}
+                    </div>
+                    <div class="prof_colm">
+                        <label class="small mb-1">Email:</label>
+                        {{ user_form.email }}
+                    </div>
+                    <div class="prof_colm">
+                        <label class="small mb-1">Biography:</label>
+                        {{ profile_form.bio }}
+                    </div>
+                </div>
+                <div class="prof_bottom">
+                    <div class="prof_ava">
+                        <img class="rounded-circle account-img" src="{{ user.profile.avatar.url }} "
+                            style="cursor: pointer;" width="150px" height="150px" />
+                    </div>
+                    <div class="prof_colm1">
+                        <label class="small mb-1">Change Avatar:</label>
+                        {{ profile_form.avatar }}
+                    </div>
+                    <a href="{% url 'password_change' %}" class="prof_b_pas"><button>Change Password</button></a>
+                    <button class="prof_b_save" type="submit" class="btn btn-dark btn-lg">Save Changes</button>
+                    <button type="reset" class="btn btn-dark btn-lg">Reset</button>
+                </div>
+
+            </form>
+        </div>
+        <div class="prof_bottom">
+        </div>
+    </div>
+</div>
+{% endblock content %}

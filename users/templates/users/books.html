@@ -1,0 +1,128 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="book_wrap">
+    <div class="book_menu">
+        <ul>
+            {% with request.resolver_match.url_name as url_name%}
+            <div>
+                {% if url_name == 'books' %}
+                <p>
+                    <li class=' book_active'> All books</li>
+                </p>
+                {% else %}
+                <a href="{% url 'books' %}">
+                    <li class=' book_not_active'> All books</li>
+                </a>
+                {% endif %}
+            </div>
+            <div>
+                <p>Bachelor:</p>
+                {% if url_name == 'b1' %}
+                <p>
+                    <li class=' book_active'>1st course</li>
+                </p>
+                {% else %}
+                <a href="{% url 'b1' %}">
+                    <li class=' book_not_active'>1st course</li>
+                </a>
+                {% endif %}
+                {% if url_name == 'b2' %}
+                <p>
+                    <li class=' book_active'>2nd course</li>
+                </p>
+                {% else %}
+                <a href="{% url 'b2' %}">
+                    <li class=' book_not_active'>2nd course</li>
+                </a>
+                {% endif %}
+                {% if url_name == 'b3' %}
+                <p>
+                    <li class=' book_active'>3rd course</li>
+                </p>
+                {% else %}
+                <a href="{% url 'b3' %}">
+                    <li class=' book_not_active'>3rd course</li>
+                </a>
+                {% endif %}
+                {% if url_name == 'b4' %}
+                <p>
+                    <li class=' book_active'>4th course</li>
+                </p>
+                {% else %}
+                <a href="{% url 'b4' %}">
+                    <li class=' book_not_active'>4th course</li>
+                </a>
+                {% endif %}
+            </div>
+            <div>
+                <p>Magistracy:</p>
+                {% if url_name == 'b5' %}
+                <p>
+                    <li class=' book_active'>5th course</li>
+                </p>
+                {% else %}
+                <a href="{% url 'b5' %}">
+                    <li class=' book_not_active'>5th course</li>
+                </a>
+                {% endif %}
+                </a>
+                {% if url_name == 'b6' %}
+                <p>
+                    <li class=' book_active'>6th course</li>
+                </p>
+                {% else %}
+                <a href="{% url 'b6' %}">
+                    <li class=' book_not_active'>6th course</li>
+                </a>
+                {% endif %}
+            </div>
+            {% endwith %}
+        </ul>
+    </div>
+    <div class="book_wrap2">
+        {% block book %}
+
+        {% endblock book %}
+        <nav class="book_nav">
+            <ul>
+                {% if page_obj.has_previous %}
+                <li>
+                    <a class="pag_arrow" href="?page={{page_obj.previous_page_number}}"><svg
+                            xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xmlns:svgjs="http://svgjs.com/svgjs" width="25" height="25" x="0" y="0" viewBox="0 0 24 24"
+                            style="enable-background:new 0 0 512 512" xml:space="preserve" class="book_l_arrow">
+                            <g>
+                                <path clip-rule="evenodd"
+                                    d="m7.89289 4.49291c.39053-.39053 1.02369-.39053 1.41422 0l6.79999 6.79999c.3905.3905.3905 1.0237 0 1.4142l-6.79999 6.8c-.39053.3905-1.02369.3905-1.41422 0-.39052-.3905-.39052-1.0237 0-1.4142l6.09291-6.0929-6.09291-6.09288c-.39052-.39053-.39052-1.02369 0-1.41421z"
+                                    fill="#ffffff" fill-rule="evenodd" data-original="#000000" class=""></path>
+                            </g>
+                        </svg></a>
+                </li>
+                {% endif %}
+                {% for i in paginator.page_range %}
+                {% if page_obj.number == i %}
+                <li class="active_pag">{{i}}</li>
+                {% elif i >= page_obj.number|add:-2 and i <= page_obj.number|add:2 %} <li><a
+                        href="?page={{i}}">{{i}}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                    {% if page_obj.has_next %}
+                    <li>
+                        <a class="pag_arrow" href="?page={{page_obj.next_page_number}}"><svg
+                                xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+                                width="25" height="25" x="0" y="0" viewBox="0 0 24 24"
+                                style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                                <g>
+                                    <path clip-rule="evenodd"
+                                        d="m7.89289 4.49291c.39053-.39053 1.02369-.39053 1.41422 0l6.79999 6.79999c.3905.3905.3905 1.0237 0 1.4142l-6.79999 6.8c-.39053.3905-1.02369.3905-1.41422 0-.39052-.3905-.39052-1.0237 0-1.4142l6.09291-6.0929-6.09291-6.09288c-.39052-.39053-.39052-1.02369 0-1.41421z"
+                                        fill="#ffffff" fill-rule="evenodd" data-original="#000000" class=""></path>
+                                </g>
+                            </svg></a>
+                    </li>
+                    {% endif %}
+            </ul>
+        </nav>
+    </div>
+</div>
+{% endblock content %}

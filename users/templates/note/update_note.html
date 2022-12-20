@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="up_wrap">
+    <div class="up_modal">
+        <form action="" method="post" enctype="multipart/form-data">
+            <h1 class="up_h">Изменение фильма</h1>
+            {% csrf_token %}
+            {{form.as_p}}
+            <input class="up_btn" type="submit" value="update" />
+        </form>
+    </div>
+</div>
+{% endblock %}

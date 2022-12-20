@@ -1,0 +1,102 @@
+.form_cont {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  background-color: tomato;
+}
+
+.form_cont > div {
+  flex: 0 1 35%;
+  margin: 0 auto;
+
+  background-color: rgba(240, 248, 255, 0.103);
+  padding: 10px 16px ;
+}
+
+.form_cont div form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.first_form > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.first_form > div > input {
+  padding: 10px 15px;
+  width: 450px;
+  border-radius: 3px;
+  border: 0.5px solid gray;
+  outline: none;
+}
+
+.first_form div label {
+  font-size: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input-group > input {
+  padding: 10px 15px;
+  width: 450px;
+  border-radius: 3px;
+  border: 0.5px solid gray;
+  outline: none;
+}
+
+.first_form2 div label {
+  font-size: 20px;
+}
+
+.form_row {
+  border-radius: 3px;
+
+  width: 450px;
+  text-align: center;
+  background-color: aliceblue;
+}
+
+.form_group button {
+  border-radius: 3px;
+
+  width: 450px;
+  height: 100%;
+  padding: 10px 15px;
+  background-color: aliceblue;
+  border: none;
+  color: red;
+  font-size: 20px;
+}
+.input-group-append {
+  display: none;
+}
+
+.h1_form_cont {
+  margin: 10px 0 20px;
+  width: 450px;
+  text-align: center;
+}
+
+.h1_form_cont h1 {
+  font-size: 30px;
+}
+.card_footer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  margin: 10px 0;
+}
+
+.a{
+  color: blue;
+}

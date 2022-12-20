@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+{% block content %}
+<div id="bg"></div>
+<div class="notes_wrap">
+    <div class="note_div">
+        <a href="/notes/add_note/" class="add">
+            <button class="add_btn">
+                <p>Add note</p>
+                <svg class="add_plus" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512"
+                    height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512"
+                    xml:space="preserve" class="">
+                    <g>
+                        <g id="_03_Login" data-name="03 Login">
+                            <path d="m256 512a25 25 0 0 1 -25-25v-462a25 25 0 0 1 50 0v462a25 25 0 0 1 -25 25z"
+                                fill="#adff2f" data-original="#000000" class=""></path>
+                            <path d="m487 281h-462a25 25 0 0 1 0-50h462a25 25 0 0 1 0 50z" fill="#adff2f"
+                                data-original="#000000" class=""></path>
+                        </g>
+                    </g>
+                </svg>
+            </button>
+        </a>
+        {% if object_list %}
+        {% for i in object_list %}
+        <div class="note">
+            <h3 class="notes_title">{{i.title_note}}</h3>
+            <p class="notes_text">{{i.text_note}}</p>
+            <div class="notes_bottom">
+                <div>
+                    <a class="notes_edit" href="/notes/{{i.id}}/update_note/">Edit</a>
+                    <a class="notes_del" id="switch" href="/notes/{{i.id}}/delete_note/">Delete</a>
+                </div>
+                <p class="notes_date">{{i.date_note}}</p>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <h1 style="margin: auto;">No notes yet</h1>
+        {% endif %}
+
+
+
+    </div>
+</div>
+{% endblock content %}

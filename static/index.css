@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100;200;300;400;500;700;800;900&display=swap');
+body {
+  overflow-x: hidden;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Arima Madurai', cursive;
+  font-weight: normal;
+}
+:root {
+  --d: 2500ms;
+  --angle: 90deg;
+  --gradX: 100%;
+  --gradY: 50%;
+  --c1: rgb(255, 255, 255);
+  --c2: rgba(168, 239, 255, 0.1);
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --gradX {
+  syntax: '<percentage>';
+  initial-value: 50%;
+  inherits: true;
+}
+
+@property --gradY {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: true;
+}
+.big_wrap {
+  display: flex;
+  flex-direction: column;
+}
+/* 111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 */
+.header {
+  z-index: 999 !important;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  position: absolute;
+}
+.head {
+  width: 80%;
+  height: 70px;
+  background-color: none;
+  border-radius: 20px 20px 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+.head_a {
+  color: white;
+  font-size: 20px;
+  display: inline-block;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+.head_a::after {
+  background-color: white;
+  display: block;
+  content: '';
+  height: 2px;
+  width: 0%;
+  -webkit-transition: width 0.1s ease-in-out;
+  -moz--transition: width 0.1s ease-in-out;
+  transition: width 0.1s ease-in-out;
+}
+
+.head_a:hover:after {
+  width: 100%;
+}
+.head_active {
+  color: white;
+  font-size: 20px;
+  display: inline-block;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+.head_active::after {
+  background-color: white;
+  display: block;
+  content: '';
+  height: 2px;
+  width: 100%;
+  -webkit-transition: width 0.1s ease-in-out;
+  -moz--transition: width 0.1s ease-in-out;
+  transition: width 0.1s ease-in-out;
+}
+input {
+  color: black !important;
+}
+textarea {
+  color: black !important;
+}
+.headInp {
+  width: 300px;
+  height: 45px;
+  border-radius: 8px;
+  display: flex;
+  border: 0.5px solid silver;
+  position: relative;
+}
+
+#formInp {
+  width: 85%;
+  height: 100%;
+  border-radius: 8px 0px 0px 8px;
+  border: none;
+  font-size: 20px;
+  outline: none;
+  padding-left: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  color: white !important;
+}
+/* .formInp:focus {
+  border: 0.5px solid white;
+  border-right: none;
+}
+.formInp:focus + .formBtn {
+  border: 0.5px solid white;
+  border-left: none;
+} */
+.formBtn {
+  width: 15%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 0px 8px 8px 0px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btnImg {
+  width: 25px;
+  height: 25px;
+}
+.headInp > input::placeholder {
+  font-size: 20px;
+  color: white;
+}
+.logoDiv {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 55px;
+  height: 50px;
+}
+.logoP {
+  font-size: 40px;
+  margin: 0px;
+}
+.headRight {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.rightDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.rightImg {
+  width: 25px;
+  height: 25px;
+}
+/* 11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 */
+
+/* 333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333 */
+
+.footer {
+  z-index: 1;
+  --footer-background: #3c1228;
+  display: grid;
+  position: relative;
+  grid-area: footer;
+  min-height: 12rem;
+}
+.footer .bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1rem;
+  background: var(--footer-background);
+  filter: url('#blob');
+}
+.footer .bubbles .bubble {
+  position: absolute;
+  left: var(--position, 50%);
+  background: var(--footer-background);
+  border-radius: 100%;
+  -webkit-animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
+    bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+  animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
+    bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+  transform: translate(-50%, 100%);
+}
+.footer .content {
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: 4rem;
+  padding: 2rem;
+  background: var(--footer-background);
+}
+.footer .content a,
+.footer .content p {
+  color: #f5f7fa;
+  text-decoration: none;
+}
+.footer .content b {
+  color: white;
+}
+.footer .content p {
+  margin: 0;
+  font-size: 0.75rem;
+}
+.footer .content > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer .content > div > div {
+  margin: 0.25rem 0;
+}
+.footer .content > div > div > * {
+  margin-right: 0.5rem;
+}
+.footer .content > div .image {
+  align-self: center;
+  width: 4rem;
+  height: 4rem;
+  margin: 0.25rem 0;
+  background-size: cover;
+  background-position: center;
+}
+
+@-webkit-keyframes bubble-size {
+  0%,
+  75% {
+    width: var(--size, 4rem);
+    height: var(--size, 4rem);
+  }
+  100% {
+    width: 0rem;
+    height: 0rem;
+  }
+}
+
+@keyframes bubble-size {
+  0%,
+  75% {
+    width: var(--size, 4rem);
+    height: var(--size, 4rem);
+  }
+  100% {
+    width: 0rem;
+    height: 0rem;
+  }
+}
+@-webkit-keyframes bubble-move {
+  0% {
+    bottom: -4rem;
+  }
+  100% {
+    bottom: var(--distance, 10rem);
+  }
+}
+@keyframes bubble-move {
+  0% {
+    bottom: -4rem;
+  }
+  100% {
+    bottom: var(--distance, 10rem);
+  }
+}

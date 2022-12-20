@@ -1,0 +1,20 @@
+{% extends "users/books.html" %}
+{% block book %}
+<div class="book_books">
+    {% if object_list %}
+    {% for i in object_list %}
+    <a href="/{{i.id}}">
+        <div class="book_book">
+            <img src="{{i.image_of_book.url}}" class="book_img" alt="pict">
+            <div class="book_h_div">
+                <h3>{{i.name_of_book}}</h3>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+    {% else %}
+    <h1>Empty...</h1>
+    {% endif %}
+
+</div>
+{% endblock book %}

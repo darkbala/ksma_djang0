@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="301px" viewBox="0 0 1440 301" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 6</title>
+    <defs>
+        <linearGradient x1="48.9974093%" y1="48.4925309%" x2="49.983635%" y2="51.1076%" id="linearGradient-1">
+            <stop stop-color="#175475" stop-opacity="0.227381993" offset="0%"></stop>
+            <stop stop-color="#175475" stop-opacity="0.347929414" offset="100%"></stop>
+        </linearGradient>
+        <path d="M1440,33.8166721 C1315.33333,15.3944426 1201,15.3944426 1097,33.8166721 C941,61.4500163 797,151.121133 648.5,156.245197 C500,161.369261 520,141.056008 304,168.689352 C160,187.111581 59,197.298708 1,199.250733 L0,301 L1439.5,301 L1440,33.8166721 Z" id="path-2"></path>
+    </defs>
+    <g id="Website-mockups" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-Copy-5" transform="translate(0.000000, -6010.000000)">
+            <g id="Group-6" transform="translate(0.000000, 6010.000000)">
+                <path d="M1440,28.2168356 C1315.33333,-9.40561187 1201,-9.40561187 1097,28.2168356 C941,84.6505068 797,117.912737 648.5,128.377259 C500,138.841781 520,97.3574262 304,153.791097 C160,191.413545 59,212.218011 1,216.204495 L0,301 L1439.5,301 L1440,28.2168356 Z" id="Path-7" fill="#1F6990"></path>
+                <g id="Path-7" transform="translate(720.000000, 160.500000) scale(-1, 1) translate(-720.000000, -160.500000) ">
+                    <use fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                    <use fill="#0B3047" xlink:href="#path-2"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

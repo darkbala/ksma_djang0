@@ -1,0 +1,46 @@
+.up_wrap {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0A9zzXYdXLKOlAQ1x-Y5PJfyYVicxtZqfyQ&usqp=CAU);
+  background-size: 100% 100%;
+}
+
+.up_modal {
+  width: 450px;
+  height: 450px;
+  border-radius: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #3c1228;
+}
+
+.up_modal form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.up_h {
+  text-align: center;
+}
+
+.up_btn {
+  padding: 5px 30px;
+  color: white !important;
+  border-radius: 30px;
+  background: none;
+  border: 2px solid white;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.up_btn:hover {
+  border: 2px solid orange;
+  color: orange !important;
+}
