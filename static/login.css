@@ -110,6 +110,7 @@
   gap: 15px;
   margin: 10px 0;
 }
-.a {
-  color: blue;
+
+.a > span {
+  color: blue !important;
 }
