@@ -23,6 +23,7 @@
   flex-wrap: wrap;
   gap: 20px;
   padding-left: 3%;
+  min-height: 450px;
 }
 .book_book {
   width: 170px;

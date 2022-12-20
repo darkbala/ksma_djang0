@@ -1,8 +1,7 @@
 {% extends "index.html" %}
 {% block title %} Register Page {% endblock title%}
 {% block content %}
-<div class="reg_wrap  "
-    style="background-image: url(https://img.freepik.com/free-photo/abstract-smooth-orange-background-layout-designstudioroom-web-template-business-report-with-smooth-circle-gradient-color_1258-96061.jpg?w=826&t=st=1671530861~exp=1671531461~hmac=480c90e38633212d58adcb210e8d90300f69d50461ef551cbe52f310075346e9); background-repeat: no-repeat; background-size: cover;">
+<div class="reg_wrap">
     <div class="reg_container">
         <div class="reg_inpts">
             <div class="reg_title">
@@ -15,7 +14,7 @@
                     <div class="xz" role="alert">
                         <div id="form_errors">
                             {% for key, value in form.errors.items %}
-                            <strong>{{ value }}</strong>
+                            <strong class="reg_title">{{ value }}</strong>
                             {% endfor %}
                         </div>
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -73,7 +72,8 @@
             </div>
             <div class="col_md_6">
                 <div class="small">
-                    <a href="{% url 'login' %}" class="have" style="font-size: 25px;">Have an account? Go to Sign in</a>
+                    <a href="{% url 'login' %}" class="have" style="font-size: 25px;">Have an account? Go to <span>Sign
+                            in</span></a>
                 </div>
             </div>
         </div>
