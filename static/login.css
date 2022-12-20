@@ -4,15 +4,16 @@
   width: 100%;
   height: 100vh;
   align-items: center;
-  background-color: tomato;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23D18'/%3E%3Cstop offset='1' stop-color='%23330000'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23FA3' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23FA3' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.4'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .form_cont > div {
   flex: 0 1 35%;
   margin: 0 auto;
-
   background-color: rgba(240, 248, 255, 0.103);
-  padding: 10px 16px ;
+  padding: 10px 16px;
 }
 
 .form_cont div form {
@@ -67,36 +68,48 @@
 
 .form_group button {
   border-radius: 3px;
-
   width: 450px;
   height: 100%;
   padding: 10px 15px;
-  background-color: aliceblue;
   border: none;
-  color: red;
   font-size: 20px;
+}
+.log_sign {
+  width: 100%;
+  height: 40px;
+  border: 2px solid white;
+  background: rgba(0, 0, 0, 0);
+  font-size: 22px;
+  width: 450px;
+  cursor: pointer;
+}
+.log_sign:hover {
+  background: white;
+  color: red;
 }
 .input-group-append {
   display: none;
 }
-
 .h1_form_cont {
-  margin: 10px 0 20px;
+  margin: 10px auto;
   width: 450px;
   text-align: center;
 }
-
+.log_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .h1_form_cont h1 {
   font-size: 30px;
 }
 .card_footer {
   display: flex;
   flex-direction: column;
+  text-align: center;
   gap: 15px;
-
   margin: 10px 0;
 }
-
-.a{
+.a {
   color: blue;
 }
